@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Level>
+  <SaveState>
+    <!--All attributes of the player will be stripped into a Stats object-->
+    <player1 MaxHealth="100" CurrentHealth="100" AttackPow="75" MagPow="100" MagDef="20" Def="0">
+      <!--Progression details here-->
+      <Pos>125,123</Pos>
+    </player1>
+    <!--
+    Type:
+      0 - Dungeon
+      1 - City
+    Teme:
+      0 - Earth
+      1 - Lightning
+      2 - Water
+      3 - Fire
+    -->
+    <Location Theme="0"/>
+  </SaveState>
+  <Tiles>
+    <!--
+    Possible types of tilesets:
+    Wall
+      Type=wall or bottom
+      StartCell=cell where we begin the wall
+      EndCell=cell end(must be horizontal or vertical)
+      Collison can be:
+                0 - no walk
+                1 - walk
+    Floor
+      Type can be:
+                0 - Themed floor
+                1 - Water
+                2 - Lava
+      StartCell = top left
+      EndCell = bottom right
+      Collison can be:
+                0 - no walk
+                1 - walk
+    
+    Walls - makes top side and bottom walls
+      EndCell = top left
+      EndCell = bottom right
+      Walls assumed non-walkable
+      
+    Room 
+      FloorType 
+                0 - Themed floor
+                1 - Water
+                2 - Lava
+      TLPos = top left
+      BRPos = bottom right
+      Floor assumed walkable 
+      Walls assumed non-walkable
+    
+    Tile information 
+    Type can be:
+                0 - wall  (for tops and sides)
+                1 - bottom (for bottom)
+                2 - corner (can be added manually or automatically by a Wall)
+                3 - floor (themed and has probability of types)
+                4 - lava
+                5 - water
+    Collison can be:
+                0 - no walk
+                1 - walk
+    
+    -->
+    <Wall Type="0" Collision="0" StartCell="0,0" EndCell="10,0"/>
+    <Wall Type="0" Collision="0" StartCell="0,0" EndCell="0,10"/>
+    <Wall Type="0" Collision="0" StartCell="10,0" EndCell="10,10"/>
+    <Wall Type="0" Collision="0" StartCell="0,10" EndCell="10,10"/>
+    <Floor Type="0" Collision="1" TLPos="1,1" BRPos="10,10"/>
+  </Tiles>
+  <Objects>
+    <!--Obejects go here... chests etc-->
+  </Objects>
+  <Enemies>
+    <!--Enemeis go here... chests etc-->
+  </Enemies>
+</Level>
